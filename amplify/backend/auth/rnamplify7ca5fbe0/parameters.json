@@ -1,0 +1,68 @@
+{
+    "identityPoolName": "rnamplify7ca5fbe0_identitypool_7ca5fbe0",
+    "allowUnauthenticatedIdentities": false,
+    "lambdaLogPolicy": "rnampl_7ca5fbe0_lambda_log_policy",
+    "openIdLambdaRoleName": "rnampl_7ca5fbe0_openid_lambda_role",
+    "openIdRolePolicy": "rnampl_7ca5fbe0_openid_pass_role_policy",
+    "openIdLambdaIAMPolicy": "rnampl_7ca5fbe0_openid_lambda_iam_policy",
+    "openIdLogPolicy": "rnampl_7ca5fbe0_openid_lambda_log_policy",
+    "userPoolName": "rnamplify7ca5fbe0_userpool_7ca5fbe0",
+    "autoVerifiedAttributes": [
+        "email"
+    ],
+    "mfaConfiguration": "OFF",
+    "mfaTypes": [
+        "SMS Text Message"
+    ],
+    "roleName": "rnampl7ca5fbe0_sns-role",
+    "roleExternalId": "rnampl7ca5fbe0_role_external_id",
+    "policyName": "rnampl7ca5fbe0-sns-policy",
+    "smsAuthenticationMessage": "Your authentication code is {####}",
+    "smsVerificationMessage": "Your verification code is {####}",
+    "emailVerificationSubject": "Your verification code",
+    "emailVerificationMessage": "Your verification code is {####}",
+    "defaultPasswordPolicy": false,
+    "passwordPolicyMinLength": 8,
+    "passwordPolicyCharacters": [],
+    "requiredAttributes": [
+        "email"
+    ],
+    "userpoolClientName": "rnampl7ca5fbe0_app_client",
+    "userpoolClientGenerateSecret": true,
+    "userpoolClientRefreshTokenValidity": 30,
+    "userpoolClientWriteAttributes": [
+        "email"
+    ],
+    "userpoolClientReadAttributes": [
+        "email"
+    ],
+    "mfaLambdaRole": "rnampl7ca5fbe0_totp_lambda_role",
+    "mfaLambdaLogPolicy": "rnampl7ca5fbe0_totp_lambda_log_policy",
+    "mfaPassRolePolicy": "rnampl7ca5fbe0_totp_pass_role_policy",
+    "mfaLambdaIAMPolicy": "rnampl7ca5fbe0_totp_lambda_iam_policy",
+    "userpoolClientLambdaRole": "rnampl7ca5fbe0_userpoolclient_lambda_role",
+    "userpoolClientLogPolicy": "rnampl7ca5fbe0_userpoolclient_lambda_log_policy",
+    "userpoolClientLambdaPolicy": "rnampl7ca5fbe0_userpoolclient_lambda_iam_policy",
+    "userpoolClientSetAttributes": false,
+    "resourceName": "rnamplify7ca5fbe0",
+    "authSelections": "identityPoolAndUserPool",
+    "authRoleName": {
+        "Ref": "AuthRoleName"
+    },
+    "unauthRoleName": {
+        "Ref": "UnauthRoleName"
+    },
+    "authRoleArn": {
+        "Fn::GetAtt": [
+            "AuthRole",
+            "Arn"
+        ]
+    },
+    "unauthRoleArn": {
+        "Fn::GetAtt": [
+            "UnauthRole",
+            "Arn"
+        ]
+    },
+    "useDefault": "default"
+}
