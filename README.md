@@ -29,3 +29,13 @@ amplify init
 
 amplify push
 ```
+
+4. Run the app
+
+```sh
+react-native run-ios
+
+# or
+
+react-native run-android
+```
