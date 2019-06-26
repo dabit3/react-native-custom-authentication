@@ -28,7 +28,7 @@ function App() {
     dispatch({ type: 'SET_INPUT', name, value })
   }
   function signUp() {
-    const { username,password, email } = state
+    const { username, password, email } = state
     Auth.signUp({ username, password, attributes: { email } })
       .then(data => {
         dispatch({ type: 'SET_FORM_STATE', formState: 'confirmSignUp' })
