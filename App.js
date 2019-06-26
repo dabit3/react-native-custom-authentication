@@ -31,6 +31,7 @@ function App() {
     const { username, password, email } = state
     Auth.signUp({ username, password, attributes: { email } })
       .then(data => {
+        console.log('successfully signed up!')
         dispatch({ type: 'SET_FORM_STATE', formState: 'confirmSignUp' })
       })
       .catch(err => console.log(err));
@@ -131,7 +132,7 @@ function App() {
       <Button
         title="Sign Out" onPress={() => {
           Auth.signOut()
-          setState({ formState: 'signIn' })
+          dispatch({ type: 'SET_FORM_STATE', formState: 'signIn' })
         }}
       />
     </View>
