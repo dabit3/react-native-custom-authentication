@@ -1,8 +1,5 @@
 import React, {Component} from 'react';
 import {Button, TextInput, StyleSheet, Text, View} from 'react-native';
-
-// Auth Auth.signIn Auth.signOut() Auth
-// aws-amplify-react-native
 import { Auth } from 'aws-amplify'
 
 const INPUT = { height: 35, width: 200, backgroundColor: '#ddd', marginBottom: 10 }
@@ -13,12 +10,12 @@ class App extends Component {
   }
   componentDidMount() {
     Auth.currentAuthenticatedUser()
-          .then(userInfo => {
-            this.setState({ formState: 'signedIn', loading: false })
-          })
-          .catch(err => {
-            this.setState({ formState: 'signUp', loading: false })
-          });
+      .then(userInfo => {
+        this.setState({ formState: 'signedIn', loading: false })
+      })
+      .catch(err => {
+        this.setState({ formState: 'signUp', loading: false })
+      });
   }
   onChange = (key, value) => { this.setState({ [key]: value })}
   signUp = () => {
